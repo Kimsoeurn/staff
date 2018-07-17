@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Basic PHP and MySQL application using PHP Data Object and Bootstarp 4">
+  <meta name="author" content="Sok Kimsoeurn">
+  <link rel="icon" href="images/dg.png">
+
+  <title>Staff Management System</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/dataTables.bootstrap4.min.css" rel="stylesheet">
+  <script src="https://use.fontawesome.com/6f636db11c.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .card img {
+      text-align: center;
+      margin: 0 auto;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+    <!-- Start Navabar-->
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Staff Management System</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="staffs.html">
+                <i class="fa fa-users"></i> Staffs
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="positions.html">
+                <i class="fa fa-tags"></i> Positions</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+
+  <!-- Start Hero Image -->
+  <div class="hero-image">
+    <div class="hero-text">
+      <img src="images/dg.png" class="rounded-circle img-thumbnail" width="120px" height="120px">
+      <h1>Company - Dev Geek</h1>
+      <p>Web Design and Development solutions</p>
+    </div>
+  </div>
+  <!-- End Hero Image -->
+  <div class="container staff">
+      <div class="col-lg-12">
+        <h3>List of Position</h3>
+        <hr>
+        <a href="create_possition.html" class="btn btn-primary mb-3"><i class="fa fa-plus"></i> Add New</a>
+        <table class="table table-bordered" id="table-positions">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Title</th>
+              <th>Description</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>
+                Web Developer
+              </td>
+              <td>Full stack web developer</td>
+              <td>
+                <a href="#" class="btn btn-secondary">
+                  <i class="fa fa-th-list"></i>
+                </a>
+                <a href="#" class="btn btn-info">
+                  <i class="fa fa-edit"></i>
+                </a>
+                <a href="#" class="btn btn-danger">
+                  <i class="fa fa-trash"></i>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <br>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <span class="text-muted">&copy; 2018 sokkimsoeurn@gmail.com</span>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.dataTables.min.js"></script>
+  <script src="js/dataTables.bootstrap4.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#table-positions').DataTable();
+    });
+  </script>
+</body>
+</html>
